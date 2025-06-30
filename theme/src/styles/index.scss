@@ -1,0 +1,29 @@
+@use "./Header";
+@use "./Footer";
+@use "./Footernavigation";
+
+// layout
+@use "TwoColumn";
+
+// component
+@use "LinkButtons";
+@use "Info";
+@use "OpenHours";
+@use "Recruit";
+@use "News";
+@use "Consultation";
+@use "Programs";
+@use "RelationLinks";
+@use "PageTitle";
+@use "PageList";
+@use "Greeting";
+@use "AnchorList";
+@use "Doctor";
+@use "ChildPages";
+@use "Facility";
+@use "CircleHeading";
+@use "Gallery";
+
+// override core blocks
+@use "./Button";
+@use "./List";

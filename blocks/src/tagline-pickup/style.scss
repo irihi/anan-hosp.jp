@@ -1,0 +1,104 @@
+@use "sass:math";
+
+.tagline-pickup-block {
+  background: #f8f8f8;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+  min-height: 1080px;
+  margin-top: calc(-139px) !important;
+
+  @media (max-width: 781px) {
+    height: auto;
+    margin-top: calc(-80px) !important;
+    min-height: calc(math.div(738, 375) * 100vw);
+  }
+  
+  &__tagline {
+    font-size: clamp(1.5rem, 1.288rem + 0.91vw, 2.375rem);
+    font-weight: 700;
+    margin: 0;
+    position: absolute;
+    top: clamp(7.938rem, 2.763rem + 22.08vw, 16.563rem);
+    right: clamp(2.5rem, 1.59rem + 3.88vw, 6.25rem);
+    writing-mode: vertical-rl;
+    z-index: 10;
+  }
+
+  &__pickup-articles {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    margin-top: 2em;
+    width: clamp(12.5rem, 8.708rem + 16.18vw, 28.125rem);
+    z-index: 10;
+
+    h4 {
+      background-color: var(--wp--preset--color--white);
+      border-radius: 0 10px 10px 0;
+      font-size: var(--wp--preset--font-size--size-30);
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      margin: 0;
+      padding: var(--wp--preset--spacing--size-24) var(--wp--preset--spacing--size-30) var(--wp--preset--spacing--size-16);
+      text-align: center;
+    }
+
+    ul {
+      list-style: disc inside;
+      
+      li {
+        color: #555;
+        margin-bottom: 0.5em;
+
+        a {
+          background-color: var(--wp--preset--color--white);
+          border-radius: 0 10px 10px 0;
+          color: #555;
+          display: block;
+          font-size: var(--wp--preset--font-size--size-18);
+          font-weight: 700;
+          padding: var(--wp--preset--spacing--size-30);
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__carousel {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    &--item {
+      background-position: center;
+      background-size: cover;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      @media (max-width: 781px) {
+        mask-position: 85% bottom !important;
+        mask-size: math.percentage(math.div(1500, 375)) auto !important;
+      }
+    }
+  }
+
+  &__top {
+    padding: math.percentage(math.div(488, 1920)) 0 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @media (max-width: 1000px) {
+      background-position: center bottom;
+      background-size: math.percentage(math.div(980, 375)) auto;
+      padding: math.percentage(math.div(205, 375)) 0 0;
+    }
+  }
+} 

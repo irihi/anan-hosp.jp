@@ -1,0 +1,38 @@
+@use "sass:math";
+
+.wp-block-gallery.blk-Gallery {
+  gap: clamp(1.25rem, 0.125rem + 4.8vw, 3.125rem);
+  width: 100%;
+
+  > .wp-block-image {
+    border: solid 1px var(--wp--preset--color--lilac-gray);
+    border-radius: 10px;
+    padding-bottom: var(--wp--preset--spacing--size-30);
+    padding-left: clamp(1.25rem, -0.55rem + 7.68vw, 4.25rem);
+    padding-right: clamp(1.25rem, -0.55rem + 7.68vw, 4.25rem);
+    padding-top: var(--wp--preset--spacing--size-30);
+    width: calc(50% - clamp(1.25rem, 0.125rem + 4.8vw, 3.125rem) * 0.5) !important;
+
+    &::before {
+      content: none !important;
+    }
+
+    img {
+      flex-basis: auto !important;
+      flex-grow: 0 !important;
+      flex-shrink: 1 !important;
+      height: auto !important;
+    }
+
+    figcaption.wp-element-caption {
+      background-image: none !important;
+      color: currentColor;
+      flex: auto;
+      font-size: var(--wp--preset--font-size--size-16);
+      margin: var(--wp--preset--spacing--size-30) 0 0;
+      padding: 0;
+      position: static !important;
+      text-shadow: none;
+    }
+  }
+}

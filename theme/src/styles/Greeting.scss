@@ -1,0 +1,23 @@
+@use "sass:math";
+
+.blk-Greeting {
+  &_Image.wp-block-image {
+    @media (max-width: 1000px) {
+      float: none;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    figcaption {
+      font-size: var(--wp--preset--font-size--size-14);
+      line-height: 1.75;
+      margin-top: var(--wp--preset--spacing--size-20);
+      text-align: center;
+
+      em {
+        font-size: var(--wp--preset--font-size--size-20);
+        font-style: normal;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@use "sass:math";
+
+.blk-CircleHeading {
+  align-items: center;
+  background-color: var(--wp--preset--color--teal);
+  border-radius: 100%;
+  color: var(--wp--preset--color--white);
+  display: flex;
+  font-size: var(--wp--preset--font-size--size-34);
+  height: 200px;
+  justify-content: center;
+  margin-bottom: clamp(2.5rem, 1rem + 6.4vw, 5rem) !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
+  margin-top: clamp(5rem, 2.375rem + 11.2vw, 9.375rem) !important;
+  text-align: center;
+  width: 200px;
+}

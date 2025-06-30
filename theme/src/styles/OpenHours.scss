@@ -1,0 +1,14 @@
+.blk-OpenHours {
+  padding: clamp(1.563rem, 1rem + 2.4vw, 2.5rem) 0 0 clamp(1.25rem, 0.5rem + 3.2vw, 2.5rem) !important;
+  
+  // 列
+  > .wp-block-group.is-layout-flex {
+    gap: 5px 15px !important;
+  }
+  
+  // 項目名
+  .has-slate-blue-background-color {
+    min-width: clamp(7.25rem, 6.35rem + 3.84vw, 8.75rem);
+    text-align: center;
+  }
+}

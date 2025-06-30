@@ -1,0 +1,20 @@
+@use "sass:math";
+
+.blk-PageTitle {
+  background-color: var(--wp--preset--color--green-white);
+  background-image: url(../images/page-title-bg.png);
+  background-position: center top;
+  background-size: 100% auto;
+  margin-bottom: 0;
+  padding-bottom: clamp(3.125rem, 1.25rem + 8vw, 6.25rem);
+  padding-top: clamp(12.5rem, 5.037rem + 31.84vw, 24.938rem);
+
+  .wp-site-blocks > & {
+    margin-top: calc(-147.5px) !important;
+
+    @media (max-width: 781px) {
+      // TODO: ロゴサイズに応じたネガティブマージンに修正
+      margin-top: calc(-92px) !important;
+    }
+  }
+}

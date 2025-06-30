@@ -1,0 +1,23 @@
+@use "sass:math";
+
+.blk-Programs {
+  .wp-block-column {
+    &:nth-child(odd) {
+      @media (max-width: 781px) {
+        padding-right: var(--wp--style--root--padding-right);
+      }
+    }
+
+    &:nth-child(even) {
+      @media (max-width: 781px) {
+        padding-left: var(--wp--style--root--padding-left);
+      }
+    }
+
+    > .wp-block-group {
+      @media (max-width: 781px) {
+        margin-top: 0 !important;
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.blk-LinkButtons {
+  padding-top: clamp(2.5rem, 1rem + 6.4vw, 5rem);
+  padding-bottom: 0;
+
+  // 奇数個なのでカラム落ちが少し見た目が悪い
+  .wp-block-columns {
+    flex-wrap: wrap !important;
+    justify-content: center;
+
+    @media (max-width: 781px) {
+      justify-content: flex-start;
+    }
+
+    .wp-block-column {
+      flex-basis: calc(20% - 20px * 0.80) !important;
+      min-width: 280px;
+
+      @media (max-width: 781px) {
+        flex-basis: calc(50% - 20px * 0.80) !important;
+        min-width: 0;
+        max-width: calc(50% - 20px * 0.80) !important;
+      }
+
+      > * {
+        height: 100%;
+      }
+
+      // 見出し
+      // 2 行分の高さを確保して中央に配置する
+      .has-size-20-font-size {
+        align-items: center;
+        display: flex;
+        min-height: calc(var(--wp--preset--font-size--size-20) * 1.5 * 2);
+        justify-content: center;
+      }
+
+      // 英字ラベル
+      .has-size-14-font-size {
+        font-size: clamp(0.75rem, 0.675rem + 0.32vw, 0.875rem) !important;
+        margin-top: clamp(0.313rem, -0.025rem + 1.44vw, 0.875rem);
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@use "sass:math";
+
+.blk-News {
+  background-image: url(../images/news-bg.png);
+  background-size: auto 100%;
+  background-position: center;
+  margin: calc(clamp(-16.125rem, -17.625rem + 6.4vw, -13.625rem)) 0 0;
+  padding: 338px 0 clamp(12.75rem, 9.9rem + 12.16vw, 17.5rem);
+  position: relative;
+  z-index: 3;
+
+  @media (max-width: 781px) {
+    background-position: math.percentage(math.div(380, 2760)) center;
+    padding-right: var(--wp--style--root--padding-right);
+    padding-left: var(--wp--style--root--padding-left);
+  }
+
+  &_Item {
+    position: relative;
+
+    &::before {
+      background-color: white;
+      border-radius: 30px;
+      content: '';
+      display: block;
+      height: 60px;
+      left: 0;
+      position: absolute;
+      transform: translate(0, -50%);
+      width: math.percentage(math.div(400, 460));
+    }
+
+    > * {
+      position: relative;
+    }
+
+    &--inner {
+      position: relative;
+
+      li {
+        padding-right: 56px;
+        position: relative;
+
+        &::before {
+          background-image: url(../images/icon-link.svg);
+          background-size: contain;
+          content: '';
+          display: block;
+          height: 26px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+          width: 26px;
+        }
+
+        &:not(:first-child) {
+          border-top: solid 1px var(--wp--preset--color--gold-yellow);
+        }
+      }
+    }
+  }
+
+  .wp-block-buttons {
+    @media (max-width: 781px) {
+      justify-content: center;
+    }
+
+    .wp-block-button {
+      &__link {
+        background-color: var(--wp--preset--color--navy-black);
+        border: solid 1px var(--wp--preset--color--navy-black);
+        border-radius: 99px;
+        color: var(--wp--preset--color--white) !important;
+        font-size: var(--wp--preset--font-size--18) !important;
+        font-weight: 400 !important;
+        padding-left: 46px;
+        padding-right: 46px;
+        width: 100%;
+        max-width: 300px;
+
+        &::after {
+          background-image: url(../images/icon-link-w.svg);
+          height: 26px;
+          right: 10px;
+          width: 26px;
+        }
+      }
+    }
+  }
+}

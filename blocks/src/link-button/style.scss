@@ -1,0 +1,17 @@
+.wp-block-anan-hosp-link-button.link-button-block {
+  background-color: var(--wp--preset--color--white);
+  border: solid 1px var(--wp--preset--color--teal);
+  border-radius: 10px;
+  color: var(--wp--preset--color--default);
+  display: block;
+  padding: clamp(1.25rem, 0.5rem + 3.2vw, 2.5rem);
+  text-decoration: none;
+
+  .wp-block-image {
+    &.aligncenter {
+      margin-left: auto;
+      margin-right: auto;
+      width: fit-content;
+    }
+  }
+}

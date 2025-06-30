@@ -1,0 +1,23 @@
+{
+  "name": "@anan-hosp/theme",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "webpack --watch --env=development",
+    "build": "webpack"
+  },
+  "dependencies": {
+    "sanitize.css": "^13.0.0"
+  },
+  "devDependencies": {
+    "copy-webpack-plugin": "^13.0.0",
+    "css-loader": "^6.11.0",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.89.2",
+    "sass-embedded": "^1.89.2",
+    "sass-loader": "^12.6.0",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.8.3",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1"
+  }
+}

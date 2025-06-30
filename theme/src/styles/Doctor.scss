@@ -1,0 +1,33 @@
+@use "sass:math";
+
+.blk-Doctor {
+  margin: 30px 0;
+  
+  .wp-block-columns {
+    gap: 15px 0;
+
+    .wp-block-column {
+      padding-left: clamp(1.25rem, 0.875rem + 1.6vw, 1.875rem);
+      padding-right: clamp(1.25rem, 0.875rem + 1.6vw, 1.875rem);
+
+      @media (max-width: 781px) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      &:first-child {
+        padding-left: 0;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+
+      &:not(:first-of-type) {
+        @media (min-width: 782px) {
+          border-left: solid 1px var(--wp--preset--color--slate-blue);
+        }
+      }
+    }
+  }
+}

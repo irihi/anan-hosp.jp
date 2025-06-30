@@ -1,0 +1,37 @@
+.blk-Recruit {
+  position: relative;
+  z-index: 10;
+
+  @media (max-width: 781px) {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  .wp-block-columns {
+    align-items: stretch !important;
+    gap: 60px 0;
+
+    @media (max-width: 781px) {
+      flex-direction: column-reverse;
+    }
+
+    .wp-block-column {
+      align-self: stretch !important;
+
+      .wp-block-image {
+        height: 100%;
+
+        @media (max-width: 781px) {
+          margin-right: calc(var(--wp--style--root--padding-right) * -1);
+        }
+
+        img {
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 0 0 0 40px;
+        }
+      }
+    }
+  }
+}

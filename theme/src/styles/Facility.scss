@@ -1,0 +1,21 @@
+@use "sass:math";
+
+.blk-Facility {
+  h3.wp-block-heading {
+    padding: 0 0 0 30px;
+    position: relative;
+
+    &::before {
+      background-color: var(--wp--preset--color--teal);
+      border-radius: 100%;
+      content: '';
+      display: block;
+      height: 20px;
+      left: 0;
+      position: absolute;
+      top: calc(var(--wp--preset--font-size--size-20) / 2 * 1.5);
+      transform: translate(0, -50%);
+      width: 20px;
+    }
+  }
+}

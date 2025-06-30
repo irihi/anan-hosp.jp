@@ -1,0 +1,33 @@
+{
+  "apiVersion": 2,
+  "name": "anan-hosp/tagline-pickup",
+  "title": "タグライン＆ピックアップ記事",
+  "category": "widgets",
+  "icon": "cover",
+  "description": "タグラインとピックアップ記事3件を表示するカルーセル対応カスタムブロック。",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "tagline": {
+      "type": "string",
+      "default": ""
+    },
+    "posts": {
+      "type": "array",
+      "default": []
+    },
+    "backgroundImages": {
+      "type": "array",
+      "default": []
+    },
+    "enableCarousel": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

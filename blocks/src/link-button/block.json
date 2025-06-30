@@ -1,0 +1,20 @@
+{
+  "apiVersion": 3,
+  "name": "anan-hosp/link-button",
+  "title": "リンクボタン",
+  "category": "design",
+  "icon": "link",
+  "description": "InnerBlocks が利用できるボタン",
+  "supports": {
+    "html": true,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "link": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

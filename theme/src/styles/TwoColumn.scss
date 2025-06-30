@@ -1,0 +1,5 @@
+@use "sass:math";
+
+.blk-2Column {
+  gap: clamp(3.125rem, -32.537rem + 73.06vw, 13.125rem) !important;
+}

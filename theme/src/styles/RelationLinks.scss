@@ -1,0 +1,61 @@
+@use "sass:math";
+
+.blk-RelationLinks {
+  position: relative;
+  z-index: 5;
+
+  .wp-block-navigation {
+    .wp-block-navigation__container {
+      gap: 30px 38px !important;
+
+      @media (max-width: 781px) {
+        flex-direction: column;
+      }
+    }
+
+    .wp-block-navigation-link {
+      // aタグ部分
+      .wp-block-navigation-item__content {
+        display: block;
+        width: fit-content;
+
+        &::after {
+          background-color: currentColor;
+          content: '';
+          display: block;
+          height: 1px;
+          transform: scale(0, 1);
+          transition: transform .3s;
+          transform-origin: right center;
+          width: 100%;
+        }
+
+        &:hover {
+          &::after {
+            transform: scale(1, 1);
+            transform-origin: left center;
+          }
+        }
+
+        &[target="_blank"] {
+          .wp-block-navigation-item__label {
+            position: relative;
+            padding-right: 15px;
+
+            &::before {
+              background-image: url(../images/icon-external.svg);
+              background-repeat: no-repeat;
+              content: '';
+              display: block;
+              position: absolute;
+              right: 0;
+              top: 0;
+              height: 12px;
+              width: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+@use 'sass:math';
+
+.toggle-button {
+  appearance: none;
+  display: none;
+
+  @media (max-width: 1100px) {
+    display: block;
+  }
+
+  &__button {
+    appearance: none;
+    background-color: var(--wp--preset--color--white);
+    border: solid 1px var(--wp--preset--color--teal);
+    border-radius: 10px;
+    height: 40px;
+    width: 40px;
+  }
+}

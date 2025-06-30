@@ -1,0 +1,23 @@
+@use "sass:math";
+
+.blk-Info {
+  padding-bottom: clamp(3.125rem, 1.25rem + 8vw, 6.25rem) !important;
+
+  &_nav {
+    @media (max-width: 1100px) {
+      grid-template-columns: 1fr;
+    }
+
+    .wp-block-buttons {
+      @media (max-width: 1100px) {
+        justify-content: center;
+      }
+
+      .wp-block-button {
+        @media (max-width: 1100px) {
+          max-width: math.percentage(math.div(260, 335));
+        }
+      }
+    }
+  }
+}

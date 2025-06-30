@@ -1,0 +1,64 @@
+@use "sass:math";
+
+.blk-ChildPages {
+  list-style: none;
+  margin: var(--wp--preset--spacing--size-40) 0 0;
+  padding: 0;
+
+  > li {
+    margin-top: clamp(1.25rem, 0.5rem + 3.2vw, 2.5rem);
+    padding: 0 0 0 17px;
+    position: relative;
+
+    &::before {
+      background-color: var(--wp--preset--color--teal);
+      content: '';
+      display: block;
+      height: 1px;
+      left: 0;
+      position: absolute;
+      top: calc(var(--wp--preset--font-size--size-14) / 2 * 1.5);
+      transform: translate(0, -50%);
+      width: 8px;
+    }
+
+    > a {
+      color: currentColor;
+      display: block;
+      text-decoration: none;
+      width: fit-content;
+    }
+
+    &.current-menu-item > a {
+      font-weight: 700;
+    }
+
+    > ul {
+      list-style: none;
+      margin: clamp(1.25rem, 0.5rem + 3.2vw, 2.5rem) 0 0;
+      padding: 0;
+
+      > li {
+        margin: clamp(0.625rem, 0.25rem + 1.6vw, 1.25rem) 0;
+
+        > a {
+          color: var(--wp--preset--color--slate-blue);
+          display: block;
+          text-decoration: none;
+          width: fit-content;
+        }
+
+        &.current-menu-item {
+          > a {
+            color: var(--wp--preset--color--slate-blue);
+            font-weight: 700;
+          }
+        }
+
+        ul {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "apiversion": 3,
+  "name": "anan-hosp/toggle-button",
+  "title": "メニュー開閉ボタン",
+  "category": "design",
+  "icon": "button",
+  "description": "メニューの開閉用のボタン",
+  "supports": {
+    "html": false
+  },
+  "attributes": {},
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.scss",
+  "style": "file:./style.css",
+  "script": "file:./script.js"
+}

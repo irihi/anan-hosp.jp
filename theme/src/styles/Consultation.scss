@@ -1,0 +1,38 @@
+@use "sass:math";
+
+.blk-Consultation {
+  background-image: url(../images/consultation-bg.jpg);
+  background-size: cover;
+  margin-top: -200px;
+  padding-top: 200px;
+  padding-bottom: clamp(4.906rem, 0.162rem + 20.24vw, 12.813rem);
+
+  &_Item {
+    background-color: var(--wp--preset--color--white);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: clamp(3.75rem, 2.4rem + 5.76vw, 6rem);
+    padding-top: clamp(1.625rem, 1.475rem + 0.64vw, 1.875rem);
+    padding-left: clamp(1.25rem, 0.125rem + 4.8vw, 3.125rem);
+    padding-right: clamp(1.25rem, 0.125rem + 4.8vw, 3.125rem);
+    max-width: 575px;
+
+    .wp-block-image {
+      aspect-ratio: 1 / 1;
+      background-color: var(--wp--preset--color--pale-yellow);
+      border-radius: 100%;
+      padding-left: math.percentage(math.div(116, 475));
+      padding-top: math.percentage(math.div(155, 475));
+      margin-bottom: math.percentage(math.div(-71, 475)) !important;;
+      margin-left: math.percentage(math.div(-75, 475)) !important;
+      margin-top: math.percentage(math.div(-135, 475)) !important;;
+      width: math.percentage(math.div(414, 475));
+
+      @media (max-width: 781px) {
+        margin-bottom: 20px !important;
+      }
+    }
+  }
+}

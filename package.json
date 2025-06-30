@@ -1,0 +1,12 @@
+{
+  "name": "anam-hosp.jp",
+  "private": true,
+  "workspaces": [
+    "theme",
+    "blocks"
+  ],
+  "volta": {
+    "node": "24.1.0",
+    "npm": "11.4.1"
+  }
+}

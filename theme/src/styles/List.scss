@@ -1,0 +1,11 @@
+@use "sass:math";
+
+ul.wp-block-list {
+  padding: 0 0 0 20px;
+}
+
+ol.wp-block-list {
+  ::marker {
+    font-weight: 700;
+  }
+}

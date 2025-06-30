@@ -5,6 +5,8 @@ import { __ } from '@wordpress/i18n';
 
 import { LinkButtonAttributes as Props } from './props';
 
+import icon from "./icon.svg?raw";
+
 const Save: React.FC<BlockSaveProps<Props>> = ({
   attributes,
 }) => {

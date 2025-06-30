@@ -24,6 +24,20 @@
     }
   }
 
+  &.wp-block-button__width-50 {
+    @media (max-width: 781px) {
+      width: 100% !important;
+    }
+  }
+
+  &.is-style-noarrow {
+    .wp-block-button__link {
+      &::after {
+        content: none;
+      }
+    }
+  }
+
   &.is-style-info {
     .wp-block-button__link {
       min-height: clamp(3.75rem, 2.25rem + 6.4vw, 6.25rem);

@@ -5,7 +5,24 @@
   color: var(--wp--preset--color--default);
   display: block;
   padding: clamp(1.25rem, 0.5rem + 3.2vw, 2.5rem);
+  position: relative;
   text-decoration: none;
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: var(--wp--preset--color--pale-yellow);
+  }
+
+  &::after {
+    background-image: url(./icon.svg);
+    bottom: clamp(0.313rem, 0.125rem + 0.8vw, 0.625rem);
+    content: '';
+    display: block;
+    height: clamp(1.25rem, 1.025rem + 0.96vw, 1.625rem);
+    position: absolute;
+    right: clamp(0.313rem, 0.125rem + 0.8vw, 0.625rem);
+    width: clamp(1.25rem, 1.025rem + 0.96vw, 1.625rem);
+  }
 
   .wp-block-image {
     &.aligncenter {

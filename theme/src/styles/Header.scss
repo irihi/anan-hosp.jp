@@ -14,8 +14,9 @@
 
   .wp-block-template-part:has(&.is-style-open) {
     @media (max-width: 1100px) {
-      background-color: var(--wp--preset--color--white);
+      background-color: var(--wp--preset--color--green-white);
       height: 100vh;
+      overflow-y: scroll;
     }
   }
 
@@ -45,9 +46,19 @@
         height: auto;
         opacity: 1;
         overflow: visible;
-        padding-top: 50px !important;
+        padding-top: 70px !important;
         pointer-events: all;
         visibility: visible;
+      }
+    }
+
+    .wp-block-navigation {
+      ul {
+        gap: 50px;
+
+        @media (max-width: 1100px) {
+          flex-direction: column;
+        }
       }
     }
   }
@@ -55,6 +66,13 @@
   &__Info {
     @media (max-width: 1100px) {
       flex-direction: column !important;
+      margin-top: 80px !important;
+    }
+
+    .wp-block-buttons {
+      @media (max-width: 1100px) {
+        display: none;
+      }
     }
   }
 
@@ -76,5 +94,9 @@
     right: 20px;
     top: 30px;
     transform: translate(0, -50%);
+
+    @media (max-width: 781px) {
+      top: 20px;
+    }
   }
 }

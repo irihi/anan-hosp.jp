@@ -104,4 +104,17 @@
       }
     }
   }
+
+  &.is-style-gray {
+    .wp-block-button__link {
+      border-color: var(--wp--preset--color--lilac-gray);
+      min-height: 80px !important;
+
+      &::after {
+        background-image: url(../images/icon-link-gray.svg);
+        height: clamp(1.25rem, 1.025rem + 0.96vw, 1.625rem);
+        width: clamp(1.25rem, 1.025rem + 0.96vw, 1.625rem);
+      }
+    }
+  }
 }

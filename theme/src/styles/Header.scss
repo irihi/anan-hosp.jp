@@ -69,7 +69,8 @@
       margin-top: 80px !important;
     }
 
-    .wp-block-buttons {
+    .wp-block-buttons,
+    .blk-Search {
       @media (max-width: 1100px) {
         display: none;
       }
@@ -87,13 +88,18 @@
       width: clamp(11rem, 7.662rem + 14.24vw, 16.563rem);
     }
   }
-  
-  .toggle-button {
+
+  &_SpButtons {
+    display: none !important;
     margin: 0;
     position: absolute;
     right: 20px;
     top: 30px;
     transform: translate(0, -50%);
+
+    @media (max-width: 1100px) {
+      display: flex !important;
+    }
 
     @media (max-width: 781px) {
       top: 20px;

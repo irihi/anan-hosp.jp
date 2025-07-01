@@ -25,5 +25,8 @@
 @use "Gallery";
 
 // override core blocks
+@use "./Heading";
 @use "./Button";
 @use "./List";
+@use "./File";
+@use "./FlexibleTable";

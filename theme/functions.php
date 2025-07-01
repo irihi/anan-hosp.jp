@@ -27,6 +27,13 @@ add_action('wp_enqueue_scripts', function () {
     [],
     filemtime(get_template_directory() . '/dist/style.css')
   );
+  wp_enqueue_script(
+    'anan-theme-script',
+    get_template_directory_uri() . '/dist/main.js',
+    [],
+    filemtime(get_template_directory() . '/dist/main.js'),
+    true
+  );
 });
 add_action('enqueue_block_editor_assets', function () {
   wp_enqueue_style(

@@ -90,6 +90,7 @@
   }
 
   &__top {
+    background-size: 100% auto;
     padding: math.percentage(math.div(488, 1920)) 0 0;
     position: absolute;
     top: 0;

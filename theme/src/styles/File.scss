@@ -1,0 +1,47 @@
+@use "sass:math";
+
+.wp-block-file {
+  padding: 0 !important;
+
+  a:not(.wp-element-button) {
+    color: currentColor;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    padding: var(--wp--peset--spacing--size-16, 16px) var(--wp--preset--spacing--size-20, 20px) !important;
+    text-decoration: none;
+
+    &::before {
+      align-items: center;
+      background-color: var(--wp--preset--color--gray);
+      border-radius: 9px 0 0 9px;
+      color: var(--wp--preset--color--white);
+      content: 'FILE';
+      display: flex;
+      justify-content: center;
+      margin:
+        calc(var(--wp--peset--spacing--size-16, 16px) * -1)
+        0
+        calc(var(--wp--peset--spacing--size-16, 16px) * -1)
+        calc(-1 * var(--wp--preset--spacing--size-20, 20px));
+      width: 55px;
+    }
+
+    &[href$=".pdf"]::before {
+      background-color: #CE3D3D;
+      content: 'PDF';
+    }
+
+    &[href$=".doc"]::before,
+    &[href$=".docx"]::before {
+      background-color: #0F4288;
+      content: 'Word';
+    }
+
+    &[href$=".xls"]::before,
+    &[href$=".xlsx"]::before {
+      background-color: #0B7C32;
+      content: 'Excel';
+    }
+  }
+}

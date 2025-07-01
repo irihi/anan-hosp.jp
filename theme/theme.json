@@ -1,5 +1,5 @@
 {
-	"$schema": "https://schemas.wp.org/wp/6.9/theme.json",
+	"$schema": "https://schemas.wp.org/wp/6.8/theme.json",
 	"settings": {
 		"blocks": {
 			"core/button": {
@@ -571,6 +571,9 @@
 					"letterSpacing": "px",
 					"lineHeight": "2"
 				}
+			},
+			"core/query-pagination-numbers": {
+				"css": ""
 			}
 		},
 		"color": {

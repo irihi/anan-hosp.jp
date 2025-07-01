@@ -79,6 +79,11 @@
         width: 100%;
         max-width: 300px;
 
+        &:hover {
+          background-color: var(--wp--preset--color--white);
+          color: var(--wp--preset--color--navy-black) !important;
+        }
+
         &::after {
           background-image: url(../images/icon-link-w.svg);
           height: 26px;

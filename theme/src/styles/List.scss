@@ -4,7 +4,16 @@ ul.wp-block-list {
   padding: 0 0 0 20px;
 }
 
+@counter-style decimal-no-dot {
+  system: numeric;
+  symbols: '0' '1' '2' '3' '4' '5' '6' '7' '8' '9';
+  suffix: ' ';
+}
+
+
 ol.wp-block-list {
+  list-style-type: decimal-no-dot;
+
   ::marker {
     font-weight: 700;
   }

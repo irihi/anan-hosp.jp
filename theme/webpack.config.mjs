@@ -22,6 +22,9 @@ export default (env) => {
         filename: "style.css",
       }),
     ],
+    resolve: {
+    extensions: ['.tsx', '.ts', '.js'],
+  },
     module: {
       rules: [
         {

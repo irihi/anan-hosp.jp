@@ -1,0 +1,15 @@
+{
+  "apiVersion": 3,
+  "name": "anan-hosp/pagetop",
+  "title": "ページトップ",
+  "category": "widget",
+  "icon": "button",
+  "description": "ページトップに戻るボタン",
+  "supports": {
+    "html": true
+  },
+  "attributes": {},
+  "editorScript": "file:./index.js",
+  "script": "file:./script.js",
+  "style": "file:./style.css"
+}

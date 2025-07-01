@@ -1,0 +1,16 @@
+{
+  "apiVersion": 3,
+  "name": "anan-hosp/search",
+  "title": "検索",
+  "category": "widget",
+  "icon": "search",
+  "description": "検索ボタンと検索フォームがセットになったブロック",
+  "supports": {
+    "html": true
+  },
+  "attributes": {
+  },
+  "editorScript": "file:./index.js",
+  "script": "file:./script.js",
+  "style": "file:./style.css"
+}

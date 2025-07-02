@@ -55,6 +55,7 @@ export default {
   entry: {
     ...entry,
     ...editorEntry,
+    editor: './src/editor.ts',
   },
   output: {
     path: path.resolve(__dirname, 'build'),

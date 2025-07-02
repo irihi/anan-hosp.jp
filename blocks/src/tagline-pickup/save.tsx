@@ -70,9 +70,6 @@ const Save: React.FC<BlockSaveProps<Props>> = ({ attributes }) => {
         </div>
         <div
           className={ `${className}__top` }
-          style={{
-            backgroundImage: `url(data:image/svg+xml;base64,${btoa(coverTop)})`,
-          }}
         />
       </div>
     </div>

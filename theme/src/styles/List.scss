@@ -13,6 +13,7 @@ ul.wp-block-list {
 
 ol.wp-block-list {
   list-style-type: decimal-no-dot;
+  padding-left: 20px !important;
 
   ::marker {
     font-weight: 700;

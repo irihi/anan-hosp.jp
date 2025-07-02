@@ -3,6 +3,8 @@
  */
 .wp-block-button {
   .wp-block-button__link {
+    padding-left: clamp(2.5rem, 1.525rem + 4.16vw, 4.125rem);
+    padding-right: clamp(2.5rem, 1.525rem + 4.16vw, 4.125rem);
     position: relative;
     transition: background-color .3s;
 

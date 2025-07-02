@@ -18,8 +18,9 @@
       font-size: var(--wp--preset--font-size--size-16);
       font-weight: 400;
       height: 100%;
-      min-height: 80px;
-      padding-right: 85px;
+      min-height: clamp(3.75rem, 3rem + 3.2vw, 5rem);
+      padding-left: 20px !important;
+      padding-right: clamp(1.875rem, -0.188rem + 8.8vw, 5.313rem);
       text-align: left;
 
       &:hover {

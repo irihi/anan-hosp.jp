@@ -107,9 +107,6 @@ const Edit: React.FC<BlockEditProps<Props>> = ({ attributes, setAttributes }) =>
         </div>
         <div
           className={ `${className}__top` }
-          style={{
-            backgroundImage: `url(data:image/svg+xml;base64,${btoa(coverTop)})`,
-          }}
         />
       </div>
 

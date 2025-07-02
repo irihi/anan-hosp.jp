@@ -90,6 +90,8 @@
   }
 
   &__top {
+    background-image: url(./cover-top.svg);
+    background-repeat: no-repeat;
     background-size: 100% auto;
     padding: math.percentage(math.div(488, 1920)) 0 0;
     position: absolute;

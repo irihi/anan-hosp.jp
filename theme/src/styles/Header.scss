@@ -1,6 +1,7 @@
 /**
  * Header
  */
+$header-shadow-scrolled: 0 2px 20px rgba(0, 0, 0, 0.08);
 
 .blk-Header {
   .wp-block-template-part:has(&) {
@@ -10,6 +11,17 @@
     transition: background-color .3s;
     width: 100%;
     z-index: 100;
+
+    &.is-style-scrolled {
+      @media (min-width: 1101px) {
+        background-color: var(--wp--preset--color--white);
+        backdrop-filter: blur(10px);
+        box-shadow: $header-shadow-scrolled;
+        
+        // WebKit系ブラウザ用のフォールバック
+        -webkit-backdrop-filter: blur(10px);
+      }
+    }
   }
 
   .wp-block-template-part:has(&.is-style-open) {
@@ -23,6 +35,7 @@
   &__Wrapper {
     @media (max-width: 1100px) {
       display: block !important;
+      padding-left: 0 !important;
       padding-right: 40px !important;
       position: relative;
     }
@@ -35,6 +48,7 @@
       height: 0;
       opacity: 0;
       overflow: hidden;
+      margin-right: -40px !important;
       padding: 0 !important;
       pointer-events: none;
       transition: opacity .3s;
@@ -46,6 +60,7 @@
         height: auto;
         opacity: 1;
         overflow: visible;
+        padding-bottom: 70px !important;
         padding-top: 70px !important;
         pointer-events: all;
         visibility: visible;

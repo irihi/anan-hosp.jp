@@ -24,7 +24,12 @@ const Save: React.FC<BlockSaveProps<Props>> = () => {
           <line y1="4.83" x2="4.83" transform="translate(0.354 8.67)" fill="none" stroke="#258d89" strokeMiterlimit="10" strokeWidth="1"/>
         </svg>
       </button>
-      <form className={ `${className}__form` }>
+      <form
+        className={ `${className}__form` }
+        method='get'
+        role='search'
+        action='/'
+      >
         <input
           className={ `${className}__input` }
           type='text'

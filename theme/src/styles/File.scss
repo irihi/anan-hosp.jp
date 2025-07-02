@@ -4,17 +4,24 @@
   padding: 0 !important;
 
   a:not(.wp-element-button) {
+    background-color: var(--wp--preset--color--white);
+    border-radius: 8px;
     color: currentColor;
     display: flex;
     gap: 20px;
     overflow: hidden;
     padding: var(--wp--peset--spacing--size-16, 16px) var(--wp--preset--spacing--size-20, 20px) !important;
     text-decoration: none;
+    transition: background-color .3s;
+
+    &:hover {
+      background-color: var(--wp--preset--color--green-white);
+    }
 
     &::before {
       align-items: center;
       background-color: var(--wp--preset--color--gray);
-      border-radius: 9px 0 0 9px;
+      border-radius: 8px 0 0 8px;
       color: var(--wp--preset--color--white);
       content: 'FILE';
       display: flex;

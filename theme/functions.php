@@ -1,4 +1,8 @@
 <?php
+require_once get_theme_file_path('inc/post-types/dayori.php');
+require_once get_theme_file_path('inc/meta-boxes/dayori-meta.php');
+require_once get_theme_file_path('inc/admin/dayori-columns.php');
+
 add_action('init', function () {
   /** テーマサポートの追加 */
   add_theme_support('editor-styles');
@@ -35,11 +39,20 @@ add_action('wp_enqueue_scripts', function () {
     true
   );
 });
+
 add_action('enqueue_block_editor_assets', function () {
   wp_enqueue_style(
     'anan-theme-style-editor',
     get_template_directory_uri() . '/dist/style.css',
     [],
     filemtime(get_template_directory() . '/dist/style.css')
+  );
+
+  wp_enqueue_script(
+    'anan-theme-script-editor',
+    get_template_directory_uri() . '/dist/editor.js',
+    [],
+    filemtime(get_template_directory()) . '/dist/editor.js',
+    true
   );
 });

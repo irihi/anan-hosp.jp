@@ -1,0 +1,17 @@
+{
+  "apiVersion": 3,
+  "name": "anan-hosp/dayori-list",
+  "title": "病院だより項目",
+  "category": "widgets",
+  "icon": "list-view",
+  "description": "クエリループ内で病院だよりの項目を表示します。",
+  "parent": [ "core/post-template" ],
+  "supports": {
+    "html": false
+  },
+  "attributes": {},
+  "editorScript": "file:./style.js",
+  "editorStyle": "file:./edit.css",
+  "style": "file:./style.css",
+  "render": "file:./render.php"
+}

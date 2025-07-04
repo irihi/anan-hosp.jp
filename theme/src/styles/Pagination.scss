@@ -1,0 +1,88 @@
+@use "sass:math";
+
+.wp-block-query-pagination {
+  gap: 5px 1px;
+  margin-top: clamp(2.5rem, 1rem + 6.4vw, 5rem);
+
+  .wp-block-query-pagination-numbers {
+    display: flex;
+    gap: 5px 1px;
+
+    .page-numbers {
+      align-items: center;
+      background-color: var(--wp--preset--color--navy-black);
+      border: solid 1px var(--wp--preset--color--navy-black);
+      border-radius: 10px;
+      color: var(--wp--preset--color--white);
+      display: flex;
+      font-size: var(--wp--preset--font-size--size-16);
+      justify-content: center;
+      height: clamp(1.875rem, 1.125rem + 3.2vw, 3.125rem);
+      width: clamp(1.875rem, 1.125rem + 3.2vw, 3.125rem);
+    }
+
+    a.page-numbers {
+      text-decoration: none;
+      transition: background-color .3s, color .3s;
+
+      &:hover {
+        background-color: var(--wp--preset--color--white);
+        color: var(--wp--preset--color--navy-black);
+      }
+    }
+  }
+
+  .wp-block-query-pagination-next,
+  .wp-block-query-pagination-previous {
+    align-items: center;
+    background-color: var(--wp--preset--color--navy-black);
+    border: solid 1px var(--wp--preset--color--navy-black);
+    border-radius: 10px;
+    color: var(--wp--preset--color--white);
+    display: flex;
+    font-size: var(--wp--preset--font-size--size-16);
+    height: clamp(1.875rem, 1.125rem + 3.2vw, 3.125rem);
+    padding: 10px;
+    position: relative;
+    text-decoration: none;
+    transition: background-color .3s, color .3s;
+
+    &:hover {
+      background-color: var(--wp--preset--color--white);
+      color: var(--wp--preset--color--navy-black);
+    }
+
+    &::after {
+      border-color: transparent;
+      border-right-color: currentColor;
+      border-style: solid;
+      border-width: 3.5px 4px 3.5px 0;
+      content: '';
+      display: block;
+      height: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 0;
+    }
+  }
+
+  .wp-block-query-pagination-next {
+    padding-left: 20px;
+    padding-right: 37px;
+
+    &::after {
+      right: 17px;
+      transform: translate(0, -50%) scale(-1, 1);
+    }
+  }
+
+  .wp-block-query-pagination-previous {
+    padding-left: 37px;
+    padding-right: 20px;
+
+    &::after {
+      left: 17px;
+    }
+  }
+}

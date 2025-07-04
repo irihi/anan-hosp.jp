@@ -10,7 +10,8 @@
     display: flex;
     gap: 20px;
     overflow: hidden;
-    padding: var(--wp--peset--spacing--size-16, 16px) var(--wp--preset--spacing--size-20, 20px) !important;
+    padding: var(--wp--peset--spacing--size-16, 16px) var(--wp--preset--spacing--size-24, 24px) var(--wp--peset--spacing--size-16, 16px) var(--wp--preset--spacing--size-20, 20px) !important;
+    position: relative;
     text-decoration: none;
     transition: background-color .3s;
 
@@ -49,6 +50,20 @@
     &[href$=".xlsx"]::before {
       background-color: #0B7C32;
       content: 'Excel';
+    }
+
+    &[target*="_blank"] {
+      &::after {
+        background-image: url(../images/icon-external.svg);
+        background-repeat: no-repeat;
+        content: '';
+        display: block;
+        height: 12px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 12px;
+      }
     }
   }
 }

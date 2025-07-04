@@ -3,8 +3,8 @@
  */
 .wp-block-button {
   .wp-block-button__link {
-    padding-left: clamp(2.5rem, 1.525rem + 4.16vw, 4.125rem);
-    padding-right: clamp(2.5rem, 1.525rem + 4.16vw, 4.125rem);
+    padding-left: clamp(2.5rem, 2.013rem + 2.08vw, 3.313rem);
+    padding-right: clamp(2.5rem, 2.013rem + 2.08vw, 3.313rem);
     position: relative;
     transition: background-color .3s;
 
@@ -23,6 +23,10 @@
       top: 50%;
       transform: translate(0, -50%);
       width: clamp(1.25rem, 1.025rem + 0.96vw, 1.625rem);
+    }
+
+    &.has-text-align-left {
+      padding-left: 20px !important;
     }
   }
 

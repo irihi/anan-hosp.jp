@@ -122,10 +122,27 @@ export default {
       combineAssets: true,
     }),
     new CopyWebpackPlugin({
-      patterns: blockNames.map(block => ({
-        from: path.join(blocksDir, block, 'block.json'),
-        to: `${block}/block.json`,
-      })),
+      patterns: blockNames.reduce((acc, block) => {
+        // block.json をコピー
+        const blockJsonPath = path.join(blocksDir, block, 'block.json');
+        if (fs.existsSync(blockJsonPath)) {
+          acc.push({
+            from: blockJsonPath,
+            to: path.join(block, 'block.json'),
+          });
+        }
+
+        // render.php が存在すればコピー
+        const renderPhpPath = path.join(blocksDir, block, 'render.php');
+        if (fs.existsSync(renderPhpPath)) {
+          acc.push({
+            from: renderPhpPath,
+            to: path.join(block, 'render.php'),
+          });
+        }
+
+        return acc;
+      }, []),
     }),
   ],
 };

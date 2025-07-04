@@ -316,61 +316,51 @@
 			"defaultSpacingSizes": false,
 			"spacingSizes": [
 				{
-					"fluid": true,
 					"name": "5px",
 					"size": "5px",
 					"slug": "size-5"
 				},
 				{
-					"fluid": true,
 					"name": "13px",
 					"size": "13px",
 					"slug": "size-13"
 				},
 				{
-					"fluid": true,
 					"name": "15px",
 					"size": "15px",
 					"slug": "size-15"
 				},
 				{
-					"fluid": true,
 					"name": "16px",
 					"size": "16px",
 					"slug": "size-16"
 				},
 				{
-					"fluid": true,
 					"name": "18px",
 					"size": "18px",
 					"slug": "size-18"
 				},
 				{
-					"fluid": true,
 					"name": "20px",
 					"size": "20px",
 					"slug": "size-20"
 				},
 				{
-					"fluid": true,
 					"name": "24px",
 					"size": "24px",
 					"slug": "size-24"
 				},
 				{
-					"fluid": true,
 					"name": "30px",
 					"size": "30px",
 					"slug": "size-30"
 				},
 				{
-					"fluid": true,
 					"name": "40px",
 					"size": "40px",
 					"slug": "size-40"
 				},
 				{
-					"fluid": true,
 					"name": "50px",
 					"size": "50px",
 					"slug": "size-50"
@@ -512,7 +502,6 @@
 						"color": "#BDB7CB",
 						"style": "solid"
 					},
-					"color": null,
 					"left": {
 						"color": "#BDB7CB",
 						"style": "solid"
@@ -522,12 +511,10 @@
 						"color": "#BDB7CB",
 						"style": "solid"
 					},
-					"style": null,
 					"top": {
 						"color": "#BDB7CB",
 						"style": "solid"
-					},
-					"width": null
+					}
 				},
 				"css": "",
 				"spacing": {

@@ -1,0 +1,52 @@
+@use "sass:math";
+
+.wp-block-details {
+  border: solid 1px var(--wp--preset--color--lilac-gray);
+  border-radius: 10px;
+  margin: clamp(2.5rem, 1rem + 6.4vw, 5rem) 0;
+  overflow: hidden;
+  padding-bottom: clamp(1.25rem, 0.875rem + 1.6vw, 1.875rem);
+  padding-left: clamp(1.25rem, 0.875rem + 1.6vw, 1.875rem);
+  padding-right: clamp(1.25rem, 0.875rem + 1.6vw, 1.875rem);
+
+  &[open] {
+    transition: border-radius .3s;
+  }
+
+  > summary {
+    background-color: var(--wp--preset--color--white);
+    display: block;
+    margin-bottom: calc(clamp(1.25rem, 0.875rem + 1.6vw, 1.875rem) * -1);
+    margin-left: calc(clamp(1.25rem, 0.875rem + 1.6vw, 1.875rem) * -1);
+    margin-right: calc(clamp(1.25rem, 0.875rem + 1.6vw, 1.875rem) * -1);
+    padding: clamp(0.938rem, 0.75rem + 0.8vw, 1.25rem) 60px clamp(0.938rem, 0.75rem + 0.8vw, 1.25rem) clamp(0.938rem, 0.75rem + 0.8vw, 1.25rem);
+    position: relative;
+    transition: background-color .3s;
+
+    &::before,
+    &::after {
+      background-color: currentColor;
+      content: '';
+      display: block;
+      height: 1px;
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 20px;
+    }
+
+    &::before {
+      transform: translate(0, -50%) rotate(90deg);
+    }
+  }
+
+  &[open] > summary {
+    background-color: #BDB7CB;
+    margin-bottom: clamp(1.25rem, 0.875rem + 1.6vw, 1.875rem);
+
+    &::before {
+      transform: translate(0, -50%) rotate(0deg);
+    }
+  }
+}

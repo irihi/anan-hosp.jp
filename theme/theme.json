@@ -240,6 +240,11 @@
 				"spacing": {
 					"margin": true
 				}
+			},
+			"core/details": {
+				"spacing": {
+					"margin": true
+				}
 			}
 		},
 		"color": {

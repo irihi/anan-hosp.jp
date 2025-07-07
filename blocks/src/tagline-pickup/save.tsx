@@ -38,24 +38,13 @@ const Save: React.FC<BlockSaveProps<Props>> = ({ attributes }) => {
           tagName="h2"
         />
 
-        { /* 公開時保留
         <div className={ `${className}__pickup-articles` }>
           <h4>Pick up</h4>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
-            {selectedPosts && selectedPosts.map((post: any) => (
-              <li key={post.id} style={{ marginBottom: '0.5rem' }}>
-                <a 
-                  href={post.link} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                >
-                  {post.title.rendered}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <ul
+            style={{ listStyle: 'none', padding: 0 }}
+            id='PickUp'
+          />
         </div>
-        */ }
         <div className={ `${className}__carousel` }>
           { backgroundImages.map((image, index) => (
             <div

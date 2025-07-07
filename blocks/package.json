@@ -23,5 +23,8 @@
     "svgo-loader": "^4.0.0",
     "tinyglobby": "^0.2.14",
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@wordpress/api-fetch": "^7.26.0"
   }
 }

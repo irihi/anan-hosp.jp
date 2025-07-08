@@ -4,6 +4,15 @@
 $header-shadow-scrolled: 0 2px 20px rgba(0, 0, 0, 0.08);
 
 .blk-Header {
+  padding-left: clamp(1.25rem, -1.319rem + 3.7vw, 3.125rem);
+  padding-right: clamp(1.25rem, -1.319rem + 3.7vw, 3.125rem);
+  position: relative;
+
+  @media (max-width: 1100px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .wp-block-template-part:has(&) {
     padding: 20px 0;
     position: sticky;

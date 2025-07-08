@@ -1,21 +1,26 @@
-window.addEventListener("DOMContentLoaded", () => {
-  // 現在のURLからハッシュを取得
+function scrollToHashTarget(): void {
   const hash = window.location.hash;
+  if (!hash) return;
 
-  if (hash) {
-    // 該当要素を取得（例：#section1）
-    const target = document.querySelector(hash) as HTMLElement | null;
-    const header = document.querySelector(".wp-block-template-part:has(.blk-Header)") as HTMLElement | null;
+  const target = document.querySelector(hash) as HTMLElement | null;
+  const header = document.querySelector(".blk-Header") as HTMLElement | null;
 
-    if (target) {
-      const headerHeight = header ? header.clientHeight * 1.5 : 0;
-      const targetTop = target.getBoundingClientRect().top + window.scrollY;
+  if (target) {
+    const headerHeight = header ? header.clientHeight * 2 : 0;
+    const targetTop = target.getBoundingClientRect().top + window.scrollY;
 
-      // スムーススクロール
-      window.scrollTo({
-        top: targetTop - headerHeight,
-        behavior: "smooth"
-      });
-    }
+    window.scrollTo({
+      top: targetTop - headerHeight,
+      behavior: "smooth"
+    });
   }
+}
+
+// ページロード時にブラウザの自動スクロールを防ぐ
+if ("scrollRestoration" in history) {
+  history.scrollRestoration = "manual";
+}
+
+window.addEventListener("load", () => {
+  setTimeout(scrollToHashTarget, 100); // ここは調整可能
 });

@@ -52,7 +52,7 @@ const Save: React.FC<BlockSaveProps<Props>> = ({ attributes }) => {
               key={ index }
               style={{
                 backgroundImage: `url(${image.url})`,
-                mask: `url(data:image/svg+xml;base64,${btoa(coverMask)}) right clamp(1.25rem, 0.158rem + 4.66vw, 5.75rem) bottom / auto 150% no-repeat`,
+                maskImage: `url(data:image/svg+xml;base64,${btoa(coverMask)})`,
               }}
             />
           )) }
